@@ -1,0 +1,92 @@
+:root {
+    --coloeTextPrimary:#FFFFFF;
+    --colorTextAccent:#FBD784;
+    --colorBackground:#0B1D26;
+}
+
+
+
+/* ==============================global============================== */
+
+
+
+body{
+    font-family: "Chivo", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--coloeTextPrimary);
+    background-color: var(--colorBackground);
+}
+
+
+
+
+/* ==============================header============================== */
+
+
+
+.logo {
+    font-family: "Chonburi", serif;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+.action-link {
+   font-size: 17px;
+   font-weight: 900;
+}
+
+
+
+/* ==============================header============================== */
+.hero- {
+    letter-spacing: 0.33em;
+    text-transform: uppercase;
+}
+.hero-title {
+    font-family: "Cinzel", serif;
+    font-size: 400px;
+    font-size: 88px;
+    line-height: 1.13646;
+    text-transform: capitalize;
+}
+.step-text {
+    font-weight: 900;
+    letter-spacing: 0.33em;
+    text-transform: uppercase;
+    color: var(--colorTextAccent);
+}
+.step-title {
+    font-family: "Cinzel", serif; 
+    font-weight: 400;
+    font-size: 64px;
+    
+}
+.step-direction {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1.77778;
+}
+.step-link {
+    color: var(--colorTextAccent);
+}
+.footer-info-text {
+    font-weight: 900;
+    line-height: 1.77778;
+}
+.footer-info-copyrigh {
+    line-height: 1.77778;
+    opacity: 0.5;
+}
+.blog-title,
+.mntn-title {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 1.33333;
+    color: var(--colorTextAccent);
+}
+.blog-link,
+.mntn-link {
+    line-height: 1.77778;
+}
