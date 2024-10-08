@@ -1,164 +1,250 @@
 :root {
-    --coloeTextPrimary:#FFFFFF;
-    --colorTextAccent:#FBD784;
-    --colorBackground:#0B1D26;
+  --colorTextPrimary: #ffffff;
+  --colorTextAccent: #fbd784;
+  --colorBackground: #0b1d26;
+}
+/* ==========================global============================ */
+body {
+  font-family: "Chivo", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--colorTextPrimary);
+  background-color: var(--colorBackground);
+  background-image: url(../images/background.webp);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+}
+@media (min-resolution:2dppx) {
+  body {
+    background-image: url(../images/BG@2x.webp);
+  }
 }
 
-
-
-/* ==============================global============================== */
-
-
-
-body{
-    font-family: "Chivo", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--coloeTextPrimary);
-    background-color: var(--colorBackground);
-}
 .container {
-    max-width:1507px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    margin-right: 15px;
+  max-width: 1507px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-
-
-/* ==============================header============================== */
+/* ======================header=========================== */
 .header {
-    padding-top: 65px;
+  padding-top: 65px;
 }
 .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 93.22%;
-    padding: 0 15px;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 93.22%;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 .nav-list {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
+
 .logo {
-    font-family: "Chonburi", serif;
-    font-weight: 400;
-    font-size: 32px;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
+  font-family: "Chonburi", serif;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+.nav-link:hover,
+.action-link:hover {
+  opacity: 0.8;
 }
 .action-link {
-    font-size: 17px;
-    font-weight: 900;
- }
+  font-size: 17px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.action-link::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/account.svg); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-
-
-
-
-/* ==============================main============================== */
-
+/* ==================================main========================= */
 .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
+  padding-top: 200px;
+  padding-bottom: 745px;
 }
 .hero-container {
-    max-width: 980px;
+  max-width: 980px;
 }
 .hero-subtitle {
-    letter-spacing: 0.33em;
-    text-transform: uppercase;
-    margin-bottom: 32px;
+  letter-spacing: 0.33em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.hero-subtitle::before {
+  content: "";
+  width: 72px;
+  height: 2px;
+  background-color: var(--colorTextAccent);
 }
 .hero-title {
-    font-family: "Cinzel", serif;
-    font-size: 400px;
-    font-size: 88px;
-    line-height: 1.13646;
-    text-transform: capitalize;
-    margin-bottom: 32px;
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  font-size: 88px;
+  line-height: 1.13636;
+  text-transform: capitalize;
+  margin-bottom: 32px;
 }
-.travel-step {
-   padding-bottom: 200px;
+.hero-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
 }
-.travel-item:nth-child(even) .step-photo {
-    order: -1;
+.hero-link:hover {
+  opacity: 0.8;
 }
-
-.travel-item  {
-       margin-bottom: 200px;
+.hero-link::after {
+  content: "";
+  width: 16px;
+  height: 24px;
+  background-image: url(../images/arrow_down.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.travel {
+  padding-bottom: 200px;
+}
+.travel-item {
+  margin-bottom: 200px;
 }
 .travel-item:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
+}
+.travel-step {
+  display: flex;
+  gap: 115px;
+  align-items: center;
+}
+.travel-item:nth-child(even) .step-photo {
+  order: -1;
 }
 .step-body {
-    display: flex;
-    flex-direction: column;
-    gap: 27px;
-    padding-left: 150px;
-  }
-  .step-text {
-    font-weight: 900;
-    letter-spacing: 0.33em;
-    text-transform: uppercase;
-    color: var(--colorTextAccent);
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding-left: 150px;
+  background-image: url(../images/card-01.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding-top: 50px;
+}
+.travel-item:nth-child(2) .step-body {
+  background-image: url(../images/card-02.svg);
+}
+.travel-item:nth-child(3) .step-body {
+  background-image: url(../images/card-03.svg);
+}
+.step-text {
+  font-weight: 900;
+  letter-spacing: 0.33em;
+  text-transform: uppercase;
+  color: var(--colorTextAccent);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.step-text::before {
+  content: "";
+  width: 72px;
+  height: 2px;
+  background-color: var(--colorTextAccent);
 }
 
 .step-title {
-    font-family: "Cinzel", serif; 
-    font-size: 64px;
-    
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  font-size: 64px;
 }
-.step-direction {
-    font-weight: 900;
-    line-height: 1.77778;
+.step-description {
+  font-weight: 900;
+  line-height: 1.77778;
 }
 .step-link {
-    color: var(--colorTextAccent);
+  color: var(--colorTextAccent);
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+.step-link:hover {
+  opacity: 0.8;
+}
+.step-link::after {
+  content: "";
+  width: 24px;
+  height: 16px;
+  background-image: url(../images/arrow_right.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* ==========================footer======================= */
 
-
-/* ==============================footer============================== */
 .footer {
   padding-bottom: 120px;
 }
+
 .footer-container {
-    display: flex; 
-    gap: 200px;
+  display: flex;
+  gap: 200px;
 }
 .footer-info {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 .footer-info-text {
-    font-weight: 900;
-    line-height: 1.77778;
-    flex-grow: 1;
+  font-weight: 900;
+  line-height: 1.77778;
+  flex-grow: 1;
+  max-width: 303px;
 }
-.footer-info-copyrigh {
-    line-height: 1.77778;
-    opacity: 0.5;
+.footer-info-copyrith {
+  line-height: 1.77778;
+  opacity: 0.5;
 }
 .blog-title,
 .mntn-title {
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 1.33333;
-    color: var(--colorTextAccent);
-    margin-bottom: 25px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: var(--colorTextAccent);
+  margin-bottom: 25px;
 }
-.blog-list,.mntn-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+
+.blog-list,
+.mntn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 .blog-link,
 .mntn-link {
-    line-height: 1.77778;
+  line-height: 1.77778;
+}
+.blog-link:hover,
+.mntn-link:hover {
+  opacity: 0.8;
 }
